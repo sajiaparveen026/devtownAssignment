@@ -1,1 +1,3 @@
 ## Note taking Application
+
+Started
