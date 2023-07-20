@@ -1,0 +1,10 @@
+/* Change the font color to black */
+.ck-content {
+    color: black;
+  }
+  
+  /* Change the background color to a light gray */
+  .ck-editor__editable {
+    background-color: #f4f4f4;
+  }
+  
