@@ -11,7 +11,7 @@ app.use(cors())
 app.use(express.json())
 
 //Routes
-app.use('/user',userRouter)
+app.use('/users',userRouter)
 app.use('/api/notes',noteRouter)
 
 //Database Connection
