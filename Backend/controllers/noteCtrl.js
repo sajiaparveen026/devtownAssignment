@@ -1,4 +1,4 @@
-const Notes = require('../../models/noteModel')
+const Notes = require('../models/noteModel')
 
 const noteCtrl = {
     getNotes: async (req, res) =>{
