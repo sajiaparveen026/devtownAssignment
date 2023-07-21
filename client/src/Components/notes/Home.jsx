@@ -99,6 +99,21 @@ export default function Home() {
     );
     setFilteredNotes(filtered);
   };
+  const shareNote = async (note) => {
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: note.title,
+          text: note.content,
+          url: window.location.href, // Share the current URL, you can modify it based on your requirements
+        });
+      } else {
+        alert('Web Share API not supported in your browser. You can manually share the note.');
+      }
+    } catch (error) {
+      console.error('Error sharing note:', error);
+    }
+  };
   return (
     <div className="note-wrapper">
         <SearchBar notes={notes} handleSearch={handleSearch} />
@@ -121,6 +136,7 @@ export default function Home() {
           <div className="card-footer">
             {note.name}
             <Link to={`edit/${note._id}`}>Edit</Link>
+            <button className="share-button" onClick={() => shareNote(note)}>Share</button>
           </div>
           <button className="close" onClick={() => deleteNote(note._id)}>
             X

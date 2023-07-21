@@ -237,3 +237,18 @@ a{
 .note-wrapper {
   margin-top: 40px; /* Add margin to push the notes below the fixed search bar */
 }
+
+/* Style for the shared note button */
+.share-button {
+  background-color: #4c87af; /* Green background color */
+  color: #ffffff; /* White text color */
+  padding: 8px 16px; /* Padding around the button text */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Show hand cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.share-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
